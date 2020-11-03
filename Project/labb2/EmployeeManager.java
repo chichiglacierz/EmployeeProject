@@ -290,7 +290,7 @@ public abstract class EmployeeManager extends Employee {
         boolean isInput = true;
         while (isInput) {
 
-            System.out.println("");
+            System.out.println();
             System.out.println(ANSI_GREEN + "You are now in the" + ANSI_RESET
                     + ANSI_YELLOW + " Employee Statistics " + ANSI_RESET + ANSI_GREEN + "section." + ANSI_RESET);
             System.out.println(ANSI_GREEN + "***********************************************" + ANSI_RESET);
@@ -316,6 +316,7 @@ public abstract class EmployeeManager extends Employee {
                     calcLowestSalary();
                     break;
                 case 4:
+                    totalBonus();
                     break;
                 case 0:
                     isInput = false;
@@ -347,7 +348,7 @@ public abstract class EmployeeManager extends Employee {
 
         //skapa variabel för att hålla hittad employee
         //EmployeeList lowestEmpSalary = null;
-
+        try {
         double lowestSalaryFound = allEmployees.get(0).getSalary();
 
         for (Employee employee : allEmployees) {
@@ -358,7 +359,10 @@ public abstract class EmployeeManager extends Employee {
             }
         }
         System.out.println("Lowest Salary in the company is: " + lowestSalaryFound);
+        } catch (Exception e) {
+            System.out.println("Problem when reading in a double");
 
+        }
         /*if (allEmployees == null || allEmployees.size() == 0) {
             double lowestSalary =  Double.MAX_VALUE;
             System.out.println("Lowest Salary : " + lowestSalary);
