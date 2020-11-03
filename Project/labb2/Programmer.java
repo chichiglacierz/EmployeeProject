@@ -8,9 +8,10 @@ public class Programmer extends Employee{
     }
 
     @Override
-    public void calcBonus() {
+    public double calcBonus() {
         double bonus = salary * 0.15;
-        System.out.println("Programmers get " + bonus + " SEK bonus.");    
+        return bonus;
+    //System.out.println("Programmers get " + bonus + " SEK bonus.");
         }
     public void calcSalary(){
         

@@ -84,9 +84,10 @@ public class Employee {
                 '}';
     }
 
-    public void calcBonus() {
+    public double calcBonus() {
         double bonus = salary * 0;
-        System.out.println("By default no bonus guaranteed. Current Bonus: " + bonus);
+        return bonus;
+        //System.out.println("By default no bonus guaranteed. Current Bonus: " + bonus);
 
     }
     

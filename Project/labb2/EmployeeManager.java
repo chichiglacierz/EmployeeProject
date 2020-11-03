@@ -179,7 +179,7 @@ public abstract class EmployeeManager extends Employee {
 
         for (Employee employee : allEmployees) {
 
-            if (employee.getFirstName().equals(employeeName)) {
+            if (employee.getFirstName().equalsIgnoreCase(employeeName)) {
                 System.out.println(employee);
             }
         }
@@ -206,7 +206,7 @@ public abstract class EmployeeManager extends Employee {
     public static void showAllEmployees() {
 
         for (int i = 0; i < allEmployees.size(); i++) {
-            System.out.println("The total number of employees in the company is:" + allEmployees.get(i));
+            System.out.println("The list of employees is:" + allEmployees.get(i));
         }
     }
 
@@ -394,6 +394,17 @@ public abstract class EmployeeManager extends Employee {
         System.out.println("Highest Salary in the company is: " + highestSalaryFound);
 
     }
+
+    public static void totalBonus() {
+        double totalBonus = 0;
+        for (Employee employee : allEmployees) {
+
+            totalBonus += employee.calcBonus();
+
+        }
+        System.out.println("Total bonus in the company: " + totalBonus);
+    }
+
     /*double allSalary = 0;
         double totalEmployees = 0;*/
  /* EmployeeList.ifEmptyPopulate();

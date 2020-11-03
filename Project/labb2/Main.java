@@ -157,7 +157,7 @@ public class Main {
                 EmployeeManager.findEmployeeByPosition();
                 break;
             case 10:
-                 EmployeeList.ifEmptyPopulate();
+                EmployeeList.ifEmptyPopulate();
                 EmployeeManager.showAllEmployees();
                 break;
             case 11:

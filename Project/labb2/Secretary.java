@@ -9,9 +9,10 @@ public class Secretary extends Employee {
     }
 
     @Override
-    public void calcBonus() {
+    public double calcBonus() {
         double bonus = salary * 0.05;
-        System.out.println("Secretaries get " + bonus + " SEK bonus.");
+        return bonus;
+        //System.out.println("Secretaries get " + bonus + " SEK bonus.");
     }
 
 }

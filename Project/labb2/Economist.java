@@ -8,8 +8,9 @@ public class Economist extends Employee  {
     }
 
     @Override
-    public void calcBonus() {
+    public double calcBonus() {
         double bonus = salary * 0.35;
-        System.out.println("Economists get " + bonus + " SEK bonus.");
+        return bonus;
+        //System.out.println("Economists get " + bonus + " SEK bonus.");
     }
 }
