@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+
 import static labb2.Main.ANSI_GREEN;
 
 public abstract class EmployeeManager extends Employee {
@@ -349,16 +350,16 @@ public abstract class EmployeeManager extends Employee {
         //skapa variabel för att hålla hittad employee
         //EmployeeList lowestEmpSalary = null;
         try {
-        double lowestSalaryFound = allEmployees.get(0).getSalary();
+            double lowestSalaryFound = allEmployees.get(0).getSalary();
 
-        for (Employee employee : allEmployees) {
-            double salary = employee.getSalary();
-            if (salary < lowestSalaryFound) {
-                //highestEmpSalary = employee;
-                lowestSalaryFound = employee.getSalary();
+            for (Employee employee : allEmployees) {
+                double salary = employee.getSalary();
+                if (salary < lowestSalaryFound) {
+                    //highestEmpSalary = employee;
+                    lowestSalaryFound = employee.getSalary();
+                }
             }
-        }
-        System.out.println("Lowest Salary in the company is: " + lowestSalaryFound);
+            System.out.println("Lowest Salary in the company is: " + lowestSalaryFound);
         } catch (Exception e) {
             System.out.println("Problem when reading in a double");
 
@@ -488,5 +489,5 @@ public abstract class EmployeeManager extends Employee {
                 System.out.println("You are now exiting the program..");
                 System.exit(0);
         }*/
- /*}*/
+    /*}*/
 }
