@@ -111,7 +111,7 @@ public EmployeeManager(String firstName, String lastName, String dateOfBirth, do
 
         Employee newEmployee = new Employee(firstName, lastName, dateOfBirth, employeeSalary, Positions.valueOf(empPosition)) {@Override
             double calcBonus() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                throw new UnsupportedOperationException("Not supported yet.");
             }
         };
         
