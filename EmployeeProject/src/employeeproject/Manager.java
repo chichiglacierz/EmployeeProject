@@ -1,7 +1,7 @@
 
 package labb2;
 
-public class Manager extends Employee {
+public class Manager extends Employee implements EmployeeInterface{
 
     public Manager(String firstName, String lastName, String dateOfBirth, int ID, double salary, Positions position) {
         super(firstName, lastName, dateOfBirth, salary, position);
@@ -17,5 +17,11 @@ public class Manager extends Employee {
     @Override
     public String toString() {
         return super.toString();
+    }
+    
+    
+    @Override
+    public void paidBusinessVisits(){
+        System.out.println("Managers gets 5 paid businesstrips paid for by the company.");
     }
 }

@@ -1,8 +1,10 @@
 
 package labb2;
 
-
-public class EmployeeInterface {
+// Not used atm
+public interface EmployeeInterface {
+    
+    public void paidBusinessVisits();
     
     
 }

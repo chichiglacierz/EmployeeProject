@@ -2,16 +2,21 @@ package labb2;
 
 import java.util.Scanner;
 
-public class EmployeeManager {
+public abstract class EmployeeManager extends Employee{
+
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
 
+public EmployeeManager(String firstName, String lastName, String dateOfBirth, double salary, Positions position) {
+        super(firstName, lastName, dateOfBirth, salary, position);
+}
+
     static Scanner sc = new Scanner(System.in);
     static int userInput;
 
-    public static void employeeManagerMenu() {
+    public static void employeeManagerMenu () {
         boolean loop = true;
         while (loop) {
             System.out.println("\n" + ANSI_GREEN + "You are now in the Employee Management section" + ANSI_RESET);
@@ -104,8 +109,12 @@ public class EmployeeManager {
         System.out.println("Position");
         String empPosition = positionHandler();
 
-        Employee newEmployee = new Employee(firstName, lastName, dateOfBirth, employeeSalary, Positions.valueOf(empPosition)) {
+        Employee newEmployee = new Employee(firstName, lastName, dateOfBirth, employeeSalary, Positions.valueOf(empPosition)) {@Override
+            double calcBonus() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
         };
+        
         EmployeeList.addEmployee(newEmployee);
         System.out.println(ANSI_YELLOW + empPosition + " " + firstName + " " + lastName + " has been created" + ANSI_RESET);
     }
