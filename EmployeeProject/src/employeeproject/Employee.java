@@ -2,7 +2,7 @@
 package labb2;
 
 
-public class Employee {
+public abstract class Employee {
     public String firstName;
     public String lastName;
     public String dateOfBirth;
@@ -81,11 +81,7 @@ public class Employee {
                 "Salary: " + salary ;
     }
 
-    public double calcBonus() {
-        double bonus = salary * 0;
-        return bonus;
-
-    }
+    public double calcBonus();
     
 }
 

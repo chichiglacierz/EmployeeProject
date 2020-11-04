@@ -18,4 +18,8 @@ public class Manager extends Employee {
     public String toString() {
         return super.toString();
     }
+
+    public void paidBusinessVisits(){
+        System.out.println("Managers get 5 business trips paid for by the company.");
+    }
 }

@@ -2,7 +2,7 @@
 package labb2;
 
 
-public class EmployeeInterface {
-    
-    
+public interface EmployeeInterface {
+
+    public void paidBusinessVisits();
 }

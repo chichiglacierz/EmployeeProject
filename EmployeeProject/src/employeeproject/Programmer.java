@@ -15,5 +15,7 @@ public class Programmer extends Employee{
     public void calcSalary(){
         
     }
-    
+    public void paidBusinessVisits(){
+        System.out.println("Programmers get 3 business trips paid for by the company.");
+    }
 }

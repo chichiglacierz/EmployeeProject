@@ -2,13 +2,13 @@ package labb2;
 
 import java.util.Scanner;
 
-public class EmployeeManager {
+public abstract class EmployeeManager {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
 
-    static Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
     static int userInput;
 
     public static void employeeManagerMenu() {
@@ -103,6 +103,13 @@ public class EmployeeManager {
 
         System.out.println("Position");
         String empPosition = positionHandler();
+
+        Employee newEmployee = new Employee(firstName, lastName, dateOfBirth, employeeSalary, Positions.valueOf(empPosition)) {
+            @Override
+            double calcBonus() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
 
         Employee newEmployee = new Employee(firstName, lastName, dateOfBirth, employeeSalary, Positions.valueOf(empPosition)) {
         };
