@@ -39,7 +39,7 @@ public class EmployeeStatistics {
                     System.out.println(ANSI_RED + "Invalid input. Please try again.." + ANSI_RESET);
                     continue;
                 }
-                if (choice < 0 || choice > 10) {
+                if (choice < 0 || choice > 5) {
                     System.out.println(ANSI_RED + "Invalid input. Please try again.." + ANSI_RESET);
                     continue;
                 }
